@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jodo da adivinhação</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="index.js"></script>
+</head>
+<body>
+  <main>
+
+    <div class="screen1">
+      <h1>Jogo da Adivinhação</h1>
+      <p>Adivinhe o número entre 0 e 10</p>
+  
+      <form action="">
+        <input type="text" id="inputNumber">
+        <button onclick="handleClick(event)">Enviar</button>
+      </form>
+    </div>
+
+    <div class="screen2 hide">
+      <h2>Acerto em 3 vezes</h2>
+
+      <button onclick="restart(event)">jogar novamente</button>
+    </div>
+  </main>
+</body>
+</html>
