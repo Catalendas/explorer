@@ -1,0 +1,105 @@
+:root {
+  font-size: 62.5%;
+
+  --hue: 194;
+  --bg-color: hsl(var(--hue), 5%, 7%);
+  --text-color: hsl(var(--hue), 40%, 98%);
+  --primary-color: hsl(var(--hue), 100%, 63%);
+  --controls-bg-color: hsl(var(--hue), 0%, 14%);
+  --button-secundary: hsl(var(--hue), 40%, 98%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html.light {
+  --text-color: hsl(var(--hue), 5%, 7%);
+  --bg-color: hsl(var(--hue), 40%, 98%);
+  --controls-bg-color: hsl(var(--hue), 0%, 14%);
+}
+
+html.light .ph-sun,
+html:not(.light) .ph-moon {
+  display: none;
+}
+
+body {
+  font-size: 1.6rem;
+  display: grid;
+  place-content: center;
+  background-color: var(--bg-color);
+  height: 100vh;
+  color: var(--text-color);
+  font-family: Roboto, sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text-color);
+}
+
+.timer {
+  color: var(--text-color);
+}
+
+.secondary {
+  color: var(--button-secundary);
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 6.4rem;
+}
+
+section {
+  color: var(--button-secundary);
+}
+
+section span {
+ font-size: 9.6rem;
+}
+
+#controls {
+  background: var(--controls-bg-color);
+  border-radius: 99rem;
+  margin-top: 1.6rem;
+  padding: 2.2rem 4rem;
+  gap: 1.6rem;
+}
+
+.running .ph-play-circle,
+.running .ph-timer,
+.music-on .ph-speaker-none,
+html:not(.running) .ph-pause-circle, 
+html:not(.running) .ph-stop-circle, 
+html:not(.music-on) .ph-speaker-high {
+  display: none;
+}
+
+
+#toggle-mode {
+  position: absolute;
+  right: 3.2rem;
+  top: 3.2rem;
+  color: var(--text-color);
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+
+  margin: -1;
+  padding: 0;
+  border: 0;
+  appearance: none;
+}

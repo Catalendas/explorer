@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timer</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <script src="js/main.js" defer type="module"></script>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <main>
+      <button 
+      id="toggle-mode">
+        <span class="sr-only">Ativar Light Mode</span>
+        <i class="ph-bold ph-sun"></i>
+        <i class="ph-bold ph-moon"></i>
+      </button>
+      
+      <section class="timer">
+        <span id="minutes">25</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+      </section>
+
+      <section id="controls">
+        <button
+        data-action="toggleRunning"
+        class="ph ph-play-circle">
+          <span class="sr-only">Iniciar contador</span>
+        </button>
+
+        <button 
+        data-action="toggleRunning"
+        class="ph ph-pause-circle">
+          <span class="sr-only">Pausar contador</span>
+        </button>
+
+        <button 
+        data-action="set"
+        class="ph ph-timer secondary">
+          <span class="sr-only">Ajustar contador</span>
+        </button>
+
+        <button 
+        data-action="reset"
+        class="ph ph-stop-circle secondary">
+          <span class="sr-only">Reiniciar contador</span>
+        </button>
+
+        <button 
+        data-action="toggleMusic"
+        class="ph ph-speaker-none secondary">
+          <span class="sr-only">Para musica</span>
+        </button>
+
+        <button 
+        data-action="toggleMusic"
+        class="ph ph-speaker-high">
+          <span class="sr-only">Iniciar musica</span>
+        </button>
+      </section>
+  </main>
+</body>
+</html>

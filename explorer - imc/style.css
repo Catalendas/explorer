@@ -1,0 +1,141 @@
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  background: #040924;
+  font-family: Roboto, sans-serif;
+}
+
+open {
+  /* display: none; */
+}
+
+main {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.card {
+  background: #fff;
+  padding: 4.8rem 6.4rem 6.4rem;
+  max-width: 42.8rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-top: 3.2rem;
+}
+
+.title {
+  color: #0C3440;
+}
+
+.input-wrapper {
+  display: contents;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+.input-wrapper label {
+  color: var(--brand-green-hover, #00453A);
+  line-height: 1.8rem;
+  font-size: 1.4rem;
+}
+
+.input-wrapper input {
+  padding: 1.6rem;
+  border-radius: .4rem;
+  background: #DCE2E9;
+  outline: none;
+  border: 1px solid rgba(73, 80, 87, 0.30);
+  color: rgba(73, 80, 87, 0.50);
+}
+
+.input-wrapper input:focus {
+  color: #212529;
+  border: 1px solid var(--brand-colors-explorer-mid, #02799D);
+}
+
+form button {
+  padding: 1.6rem;
+  background-color: #02799D;
+  color: #fff;
+  font-weight: 700;
+  line-height: 20px;
+  border: 0;
+  border-radius: .4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+
+  cursor: pointer;
+}
+
+/* form button:hover {
+  filter: ;
+} */
+.modal-wrapper.open {
+  opacity: 1;
+  visibility: visible;
+  display: grid;
+}
+.modal-wrapper {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  background: rgba(0, 0, 0, 0.70);
+
+  opacity: 0;
+  visibility: 0;
+  display: none;
+}
+
+.modal {
+  position: relative;
+}
+
+.modal button {
+  border: 0;
+  background: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.alert-error.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.alert-error {
+  position: absolute;
+  background-color: #F03E3E;
+  top: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  color: white;
+  padding: .8rem 0;
+  font-weight: bold;
+
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: transform .5s;
+}

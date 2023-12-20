@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: Mulishd, sans-serif;
+
+  --base-color-purple-200: #B52184;
+  --base-color-blue-700: #312D64;
+  --base-color-white: #fff;
+}
+
+body {
+  font-family: Mulishd, sans-serif;
+  font-size: 1.6rem;
+  color: var(--base-color-blue-700);
+}
+
+.container {
+  width: min(36.4rem, 100%);
+  margin: 0 auto;
+}
+
+h2 {
+  color: var(--base-color-purple-200);
+  font-weight: 900;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.7rem;
+}
+
+header > img {
+  width: 364px;
+  height: 370px;
+}
+
+#header-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+#header-content p {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+#header-content button {
+  margin: 0;
+  background: none;
+  border: 0;
+  width: 6rem;
+  height: 10.5rem;
+}
+
+h1 {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: var(--base-color-purple-200);
+}
+
+#card-container {
+  width: 100%;
+  margin: 9.3rem 0 0;
+  background: var(--base-color-blue-700);
+}
+
+#card-group {
+  padding: 5.3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  background: var(--base-color-white);
+  border-radius: 2rem;
+  padding: 2.5rem;
+}
+
+.card img {
+  width: 8rem;
+  height: 8rem;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card-text p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  margin: 7.5rem 0;
+}
+
+input {
+  border: 0;
+  outline: 0;
+}
+
+label {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem 1.6rem;
+  border: 1px solid var(--base-color-blue-700);
+  border-radius: 1.6rem;
+}
+
+textarea {
+  padding: 1.6rem;
+  border: 1px solid var(--base-color-blue-700);
+  border-radius: 1.6rem;
+  height: 9.8rem;
+  line-height: 140%;
+  outline: 0;
+  font-family: Mulishd, sans-serif;
+}
+
+textarea::placeholder, input::placeholder {
+  color: var(--base-color-blue-700);
+  font-weight: 600;
+}
+
+#form-button {
+  height: 4.5rem;
+  padding: 1.6rem;
+  border: 0;
+  background: var(--base-color-blue-700);
+  color: var(--base-color-white);
+  width: max-content;
+  height: 4.5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  border-radius: 1.6rem;
+  display: flex;
+  align-items: center;
+}
+
+#stars {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+}
+
+footer {
+  margin-top: auto;
+  padding: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--base-color-white);
+  background-color: var(--base-color-blue-700);
+}
+
+@media (min-width: 1440px) {
+  .container {
+    width: min(130rem, 100%);
+    margin: 0 auto;
+  }
+
+  header {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2.8rem;
+  }
+
+  header > img {
+    width: 719px;
+    height: 732px;
+    /* position: absolute;
+    right: 1px; */
+  }
+
+  #header-content {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 17.9rem;
+  }
+  
+  #header-content p {
+    font-size: 2rem;
+  }
+  
+  #header-content button {
+    margin: 0;
+    background: none;
+    border: 0;
+    width: 6rem;
+    height: 10.5rem;
+  }
+  
+  h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--base-color-purple-200);
+  }
+
+  #card-group {
+    padding: 5.3rem 0;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+  }
+
+  #stars {
+    width: 66.4rem;
+    height: 61.2rem;
+    position: static;
+    overflow: 0;
+    object-fit: cover;
+  }
+
+  #form-container {
+    display: flex;
+    gap: 9.2rem;
+    padding-left: 109px;
+  }
+
+  form h2 {
+    font-size: 42px;
+  }
+}
