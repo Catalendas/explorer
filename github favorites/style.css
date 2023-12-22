@@ -1,0 +1,215 @@
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --ff-primary: 'Poppins', sans-serif;
+  --text-color: #303030;
+
+  --hue: 195;
+  --primary-color: hsl(var(--hue), 91%, 25%, 1);
+  --primary-black: #000;
+
+  --secondary-color: #092D38;
+}
+
+body {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background-color: var(--primary-black);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+body * {
+  font-family: var(--ff-primary);
+}
+
+button {
+  background: var(--primary-color);
+  border: none;
+  cursor: pointer;
+}
+
+#app {
+  max-width: 112rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 2.5rem 0;
+}
+
+header h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+.search input {
+  height: 3.2rem;
+  width: 43rem;
+  background-color: #06181C;
+  color: #7C7C8A;
+  border: 0;
+  border-radius: .5rem;
+  padding: 0 .8rem;
+}
+
+.search button {
+  border-radius: .5rem;
+  height: 3.2rem;
+  padding: 0 1rem;
+  color: white;
+}
+
+.search button:hover {
+  filter: brightness(1.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+  /* border-radius: 1.2rem; */
+}
+
+table * {
+  font-size: 1.4rem;
+  color: white;
+}
+
+table th {
+  background: var(--secondary-color);
+  text-align: left;
+  font-weight: normal;
+  padding: 1.5rem;
+}
+
+table th:first-child {
+  border-top-left-radius: 1.2rem;
+}
+
+table th:last-child {
+  border-top-right-radius: 1.2rem;
+}
+
+table tr:nth-child(odd) {
+  background-color: #06181C;
+}
+
+table tr:nth-child(even) {
+  background-color: #06161B80;
+}
+
+/* table tr:last-child td:first-child {
+  border-bottom-left-radius: 1.2rem;
+} 
+
+table tr:last-child td:last-child {
+  border-bottom-right-radius: 1.2rem;
+} */
+
+thead, tbody {
+  display: block;
+  width: 100%;
+}
+
+table tbody {
+  height: 68.8rem;
+  overflow: auto;
+}
+
+
+tr td:first-child, tr th:first-child {
+  width: 70rem;
+}
+
+tr td:nth-child(2), tr th:nth-child(2) {
+  width: 15.4rem;
+}
+
+tr td:nth-child(3), tr th:nth-child(3) {
+  width: 15.6rem;
+}
+tr td:last-child, tr th:last-child {
+  width: 11.4rem;
+}
+
+table tbody tr td {
+  padding: 1.5rem;
+  text-align: left;
+  width: 100%;
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+td.user img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+td.user a {
+  text-decoration: none;
+}
+
+td.user a p {
+  font-weight: bold;
+}
+
+td .remove {
+  background: none;
+  border: none;
+
+  color: red
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4A808C;
+}
+
+/* tr:first-child td:first-child { border-top-left-radius: 10px; } */
+/* tr:first-child td:last-child { border-top-right-radius: 10px; } */
+
+tr:last-child td:first-child { border-bottom-left-radius: 10px; }
+tr:last-child td:last-child { border-bottom-right-radius: 10px; }
+/* 
+tr:first-child td { border-top-style: solid; }
+tr td:first-child { border-left-style: solid; } */
